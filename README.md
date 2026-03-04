@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ToDoGTD | Visual Task Management & GTD 🚀
 
-## Getting Started
+**ToDoGTD** is a premium, high-fidelity productivity application inspired by Things 3, but enhanced with powerful data visualization, clean architecture, and voice-first interactions.
 
-First, run the development server:
+![ToDoGTD Preview](https://via.placeholder.com/1200x600/1a1f2e/ffffff?text=ToDoGTD+Visual+Task+Management) (Replace with a real screenshot soon!)
 
+## ✨ Features
+
+- **💎 Premium UI/UX:** A stunning dark mode interface with glassmorphic elements and smooth Framer Motion animations.
+- **📊 Visual Dashboard:** Real-time productivity tracking with the "Productivity Pulse" area chart and detailed "Insights" page.
+- **🎙️ Voice-First Interaction:** Create tasks and navigate the app using natural language thanks to the integrated Web Speech API.
+- **🔥 Real-time Sync:** Powered by Firebase Firestore for seamless data persistence across sessions.
+- **🏗️ Clean Architecture:** Organized into Domain, Application, Infrastructure, and UI layers for maximum maintainability.
+- **📱 Responsive Design:** Fully optimized for both desktop and mobile experiences.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS + Vanilla CSS (Glassmorphism)
+- **State Management:** [Zustand](https://zustand-demo.pmnd.rs/)
+- **Visualizations:** [Recharts](https://recharts.org/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Backend:** [Firebase](https://firebase.google.com/) (Auth & Firestore)
+- **Voice Service:** Web Speech API
+
+## 🚀 Getting Started
+
+To run this project locally, follow these steps:
+
+### 1. Prerequisites
+- Node.js 18.x or higher
+- A Firebase Project (for Auth and Firestore)
+
+### 2. Installation
+Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/miguel322/ToDoGTD.git
+cd ToDoGTD
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Environment Configuration
+Create a `.env.local` file in the root directory and add your Firebase credentials:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_API_KEY
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID
+NEXT_PUBLIC_FIREBASE_APP_ID=YOUR_APP_ID
+```
+*(You can use `.env.local.example` as a template)*
 
-## Learn More
+### 4. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to see the app in action.
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/domain`: Core business logic and types.
+- `src/application`: State management (Zustand) and custom hooks.
+- `src/infrastructure`: External service integrations (Firebase, Voice API).
+- `src/components`: UI components organized by complexity (Atoms, Molecules, Organisms).
+- `src/app`: Page routes and layouts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+Feel free to open issues or submit pull requests to help improve ToDoGTD!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
